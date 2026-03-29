@@ -76,7 +76,7 @@ const coreStacks = ["Java Spring Boot", "JavaScript", "TypeScript", "Node.js", "
 const experiencesByLang = {
   en: [
     {
-      time: "01/2026 — Present",
+      time: "02/2026 — Present",
       role: "Automation Intern",
       company: "SSI Securities Corporation ",
       location: "Hanoi City",
@@ -132,7 +132,7 @@ const experiencesByLang = {
 
   vi: [
     {
-      time: "01/2026 — Hiện tại",
+      time: "02/2026 — Hiện tại",
       role: "Thực tập sinh Tự động hóa",
       company: "Công ty Cổ phần Chứng khoán SSI",
       location: "Hà Nội",

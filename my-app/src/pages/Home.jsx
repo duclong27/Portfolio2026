@@ -62,7 +62,7 @@ const content = {
         ctaProfile: "View Profile",
         ctaContact: "Quick contact",
         stats: [
-            { value: "6+", label: "Months of experience" },
+            { value: "8+", label: "Months of experience" },
             { value: "3+", label: "Shipped projects" },
             { value: "99.9%", label: "Uptime maintained" },
         ],
