@@ -1,13 +1,105 @@
 import { useLanguage } from "../context/LanguageContext";
+import { Link } from "react-router-dom";
+const coreStacks = ["Java Spring Boot", "JavaScript", "TypeScript", "Node.js", "REST APIs", "MySQL"];
 
-const coreStacks = ["React", "JavaScript", "TypeScript", "Node.js", "REST APIs", "MySQL"];
+// const experiencesByLang = {
+//   en: [
+//     {
+//       time: "10/2025 — 12/2025",
+//       role: "Full-stack Intern",
+//       company: "GLOBAL PROFESSIONAL SOFTWARE JSC (PNGSoft)",
+//       location: "Hanoi",
+//       stack: [
+//         ".NET",
+//         "Java",
+//         "JavaScript",
+//         "jQuery",
+//         "HTML/CSS",
+//         "SQL Server",
+//         "REST APIs",
+//       ],
+//       highlights: [
+//         "Developed and maintained backend modules for a Travel Management System (TMS), including supplier management and payment workflows.",
+//         "Implemented RESTful APIs to integrate with the MISA accounting system for accounting data synchronization.",
+//         "Built internal admin UI features using JavaScript and jQuery, including file and image management with elFinder.",
+//       ],
+//     },
+//     {
+//       time: "12/2024 — 03/2025",
+//       role: "Java Backend Intern",
+//       company: "HT Vietnam Group JSC",
+//       location: "Hanoi",
+//       stack: ["Java", "Spring Boot", "MySQL", "REST APIs", "Git"],
+//       highlights: [
+//         "Developed RESTful APIs using Java Spring Boot for a student management system.",
+//         "Handled MySQL data persistence, queries, and backend processing logic.",
+//         "Collaborated with frontend and QA teams in an Agile/Scrum environment.",
+//       ],
+//     },
+//   ],
 
+//   vi: [
+//     {
+//       time: "10/2025 — 12/2025",
+//       role: "Thực tập sinh Full-stack",
+//       company: "GLOBAL PROFESSIONAL SOFTWARE JSC (PNGSoft)",
+//       location: "Hà Nội",
+//       stack: [
+//         ".NET",
+//         "Java",
+//         "JavaScript",
+//         "jQuery",
+//         "HTML/CSS",
+//         "SQL Server",
+//         "REST API",
+//       ],
+//       highlights: [
+//         "Phát triển và bảo trì các module backend cho hệ thống quản lý du lịch (TMS), bao gồm quản lý nhà cung cấp và quy trình thanh toán.",
+//         "Xây dựng RESTful API tích hợp với hệ thống kế toán MISA để đồng bộ dữ liệu tài chính.",
+//         "Xây dựng giao diện quản trị nội bộ bằng JavaScript/jQuery, tích hợp elFinder để quản lý file và hình ảnh.",
+//       ],
+//     },
+//     {
+//       time: "12/2024 — 03/2025",
+//       role: "Thực tập sinh Java Backend",
+//       company: "HT Vietnam Group JSC",
+//       location: "Hà Nội",
+//       stack: ["Java", "Spring Boot", "MySQL", "REST API", "Git"],
+//       highlights: [
+//         "Phát triển RESTful API bằng Java Spring Boot cho hệ thống quản lý sinh viên.",
+//         "Xử lý lưu trữ và truy vấn dữ liệu MySQL cho backend.",
+//         "Phối hợp làm việc cùng frontend, QA theo mô hình Agile/Scrum.",
+//       ],
+//     },
+//   ],
+// };
 const experiencesByLang = {
   en: [
     {
+      time: "01/2026 — Present",
+      role: "Automation Intern",
+      company: "SSI Securities Corporation ",
+      location: "Hanoi City",
+      stack: [
+        "Java",
+        "Spring Boot",
+        "Power Automate",
+        "Microsoft Teams",
+        "Jira API",
+        "AI / Gemini Studio",
+      ],
+      highlights: [
+        "Built an AI-powered Jira assistant bot integrated with Microsoft Teams for real-time issue interaction.",
+        "Implemented Power Automate flows to orchestrate notifications and routing between Jira, Teams, and internal systems.",
+        "Developed PAD (Power Automate Desktop) flows to automate onboarding and document-signing workflows.",
+      ],
+      detailLink: "/SSIExperience",
+      detailLabel: "View project details →",
+    },
+    {
       time: "10/2025 — 12/2025",
       role: "Full-stack Intern",
-      company: "GLOBAL PROFESSIONAL SOFTWARE JSC (PNGSoft)",
+      company: "Professional and Global Software Corporation",
       location: "Hanoi",
       stack: [
         ".NET",
@@ -40,9 +132,30 @@ const experiencesByLang = {
 
   vi: [
     {
+      time: "01/2026 — Hiện tại",
+      role: "Thực tập sinh Tự động hóa",
+      company: "Công ty Cổ phần Chứng khoán SSI",
+      location: "Hà Nội",
+      stack: [
+        "Java",
+        "Spring Boot",
+        "Power Automate",
+        "Microsoft Teams",
+        "Jira API",
+        "AI / Gemini Studio",
+      ],
+      highlights: [
+        "Xây dựng bot trợ lý Jira tích hợp AI vào Microsoft Teams để tương tác issue theo thời gian thực.",
+        "Triển khai Power Automate flows để điều phối thông báo và routing giữa Jira, Teams và các hệ thống nội bộ.",
+        "Phát triển PAD flows để tự động hóa quy trình onboarding và ký tài liệu điện tử.",
+      ],
+      detailLink: "/SSIExperience",
+      detailLabel: "Xem chi tiết dự án →",
+    },
+    {
       time: "10/2025 — 12/2025",
       role: "Thực tập sinh Full-stack",
-      company: "GLOBAL PROFESSIONAL SOFTWARE JSC (PNGSoft)",
+      company: "Công ty Cổ phần Phần mềm Chuyên Nghiệp Toàn cầu",
       location: "Hà Nội",
       stack: [
         ".NET",
@@ -62,7 +175,7 @@ const experiencesByLang = {
     {
       time: "12/2024 — 03/2025",
       role: "Thực tập sinh Java Backend",
-      company: "HT Vietnam Group JSC",
+      company: "Công ty Cổ phần Tập đoàn HT Việt Nam",
       location: "Hà Nội",
       stack: ["Java", "Spring Boot", "MySQL", "REST API", "Git"],
       highlights: [
@@ -73,7 +186,6 @@ const experiencesByLang = {
     },
   ],
 };
-
 
 const textByLang = {
   vi: {
@@ -116,7 +228,7 @@ export default function Experience() {
   return (
     <section className="exp container">
       <div className="exp__hero">
-       
+
         <h1 className="exp__title">{t.title}</h1>
         <p className="exp__lead">{t.lead}</p>
 
@@ -187,6 +299,15 @@ export default function Experience() {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
+
+                {/* Nút "Xem chi tiết" — chỉ render nếu card có detailLink */}
+                {exp.detailLink && (
+                  <div className="exp__detail-row">
+                    <Link to={exp.detailLink} className="exp__detail-btn">
+                      {exp.detailLabel}
+                    </Link>
+                  </div>
+                )}
               </div>
             </article>
           ))}

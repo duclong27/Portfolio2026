@@ -1,15 +1,14 @@
-
 import {
-    Atom,          // React
-    Type,          // TypeScript
-    Route,         // React Router
-    Wind,          // Tailwind
-    Server,        // Node
+    Atom,
+    Type,
+    Route,
+    Wind,
+    Server,
     Boxes,
-    KeyRound,      // JWT
-    Cloud,         // REST APIs
-    Database,      // MySQL/SQL
-    GitBranch,     // Git
+    KeyRound,
+    Cloud,
+    Database,
+    GitBranch,
     Send,
     Coffee,
     Container, ShieldCheck, Workflow, Globe, ServerCog, Languages
@@ -27,7 +26,7 @@ const content = {
         ctaProfile: "Xem Profile",
         ctaContact: "Liên hệ nhanh",
         stats: [
-            { value: "6+", label: "Tháng kinh nghiệm" },
+            { value: "8+", label: "Tháng kinh nghiệm" },
             { value: "3+", label: "Dự án đã triển khai" },
             { value: "99.9%", label: "Uptime đã duy trì" },
         ],
@@ -246,10 +245,6 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
-
-
-
-
             </div>
 
             <div id="contact" className="home__contact">
