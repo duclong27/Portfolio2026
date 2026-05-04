@@ -319,13 +319,12 @@ import GetDetailsIssue from "../assets/SSIPictures/GetIssue.png";
 import MyAssignIssue from "../assets/SSIPictures/MyAssignsIssue.png";
 import TransitionWorkflow from "../assets/SSIPictures/TransitionWorkflows.png";
 import UpdateIssueDescription from "../assets/SSIPictures/UpdateDescription.png";
+import AnalyzeCV from "../assets/SSIPictures/Analyze.png";
+import ManageJD from "../assets/SSIPictures/ManageJD.png";
+import Result  from "../assets/SSIPictures/Result.png";
+import ExcelResult from "../assets/SSIPictures/ExcelResult.png";
 
-// CV Matcher images — bỏ comment khi có ảnh thật
-// import CVUploadJD  from "../assets/CVMatcher/UploadJD.png";
-// import CVAnalyze   from "../assets/CVMatcher/Analyze.png";
-// import CVResult    from "../assets/CVMatcher/Result.png";
-// import CVHistory   from "../assets/CVMatcher/History.png";
-// import CVExport    from "../assets/CVMatcher/Export.png";
+
 
 
 /* ─────────────────────────────────────────────
@@ -406,12 +405,11 @@ const content = {
         ],
 
         cvDemoTitle: "Demo",
-        cvDemoImages: [
-            // { src: CVUploadJD,  caption: "Upload & manage Job Description" },
-            // { src: CVAnalyze,   caption: "Upload CV and trigger AI analysis" },
-            // { src: CVResult,    caption: "Matching score across 3 criteria" },
-            // { src: CVHistory,   caption: "History tab — past analysis sessions" },
-            // { src: CVExport,    caption: "Export results to Excel" },
+        cvDemoImages: [          
+            { src: AnalyzeCV ,   caption: "Upload CV and trigger AI analysis and display details why candidate is or is not a good fit" },
+            { src: ManageJD ,  caption: "Upload & manage Job Description" },
+            { src: Result,   caption: "Display analysis results for each candidate with detailed explanations" },
+            { src: ExcelResult,    caption: "Export results to Excel" },
         ],
 
         cvImpactTitle: "Impact",
@@ -514,7 +512,12 @@ const content = {
         ],
 
         cvDemoTitle: "Demo",
-        cvDemoImages: [],
+        cvDemoImages: [          
+            { src: AnalyzeCV ,   caption: "Đăng tải CV và kích hoạt phân tích AI" },
+            { src: ManageJD ,  caption: "Đăng tải và quản lý Job Description, phân tích đẩy lý do tại sao ứng viên phù hợp và không phù hợp cho từng tiêu chí" },
+            { src: Result,   caption: "Hiển thị kết quả cho từng ứng viên với từng JD" },
+            { src: ExcelResult,    caption: "Xuất kết quả ra file Excel" },
+        ],
 
         cvImpactTitle: "Kết quả đạt được",
         cvImpactItems: [
