@@ -6,7 +6,7 @@ const coreStacks = ["Java Spring Boot", "JavaScript", "TypeScript", "Node.js", "
 const experiencesByLang = {
   en: [
     {
-      time: "02/2026 — Present",
+      time: "02/2026 — 04/2026",
       role: "Process Automation Intern",
       company: "SSI Securities Corporation ",
       location: "Hanoi",
@@ -20,7 +20,7 @@ const experiencesByLang = {
       ],
       highlights: [
         "Built an AI-powered Jira assistant bot integrated with Microsoft Teams for real-time issue interaction.",
-        "Exploring AI techniques for CV parsing, focusing on extracting and structuring candidate information from unstructured resumes.",
+        "Built and developed an AI-powered CV screening tool using Python, FastAPI, React and Ollama (Mistral) to automatically match candidates against Job Descriptions",
         "Developed Power Automate  flows to automate onboarding and document-signing workflows.",
       ],
       detailLink: "/SSIExperience",
@@ -62,7 +62,7 @@ const experiencesByLang = {
 
   vi: [
     {
-      time: "02/2026 — Hiện tại",
+      time: "02/2026 — 04/2026",
       role: "Thực tập sinh Tự động hóa quy trình",
       company: "Công ty Cổ phần Chứng khoán SSI",
       location: "Hà Nội",
@@ -76,7 +76,7 @@ const experiencesByLang = {
       ],
       highlights: [
         "Xây dựng bot trợ lý Jira tích hợp AI vào Microsoft Teams để tương tác issue theo thời gian thực.",
-        "Đang tìm hiểu các kỹ thuật AI cho việc phân tích CV, tập trung vào việc trích xuất và cấu trúc thông tin ứng viên từ các CV không có cấu trúc.",
+        "Xây dựng và phát triển công cụ sàng lọc CV tự động sử dụng AI, tích hợp Python, FastAPI, React và Ollama (Mistral) để đánh giá mức độ phù hợp của ứng viên với JD",
         "Phát triển Power Automate flows để tự động hóa quy trình onboarding và ký tài liệu điện tử.",
       ],
       detailLink: "/SSIExperience",

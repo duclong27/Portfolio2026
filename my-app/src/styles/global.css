@@ -282,7 +282,6 @@ video {
 }
 
 .exp__hero {
-    max-width: 860px;
     display: grid;
     gap: calc(var(--space-3) + 4px);
     margin-bottom: calc(var(--space-5) + 8px);
@@ -1417,7 +1416,6 @@ video {
 .ssi__header {
     display: grid;
     gap: calc(var(--space-3) + 2px);
-    max-width: 900px;
 }
 
 .ssi__eyebrow {
