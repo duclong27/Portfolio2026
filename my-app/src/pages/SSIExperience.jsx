@@ -388,7 +388,7 @@ const content = {
         cvEyebrow: "AI Recruitment Tool · SSI Securities",
         cvTitle: "CV Matcher — AI Recruitment Analyzer",
         cvSubtitle: "Automated system that analyzes candidate CVs against Job Descriptions using local AI",
-        cvStack: ["Python", "FastAPI", "React", "Ollama", "Mistral", "pnpm"],
+        cvStack: ["Python", "FastAPI", "React", "Ollama", "Mistral"],
 
         cvOverviewTitle: "Overview",
         cvOverviewText:
@@ -495,7 +495,7 @@ const content = {
         cvEyebrow: "Công cụ tuyển dụng AI · SSI Securities",
         cvTitle: "CV Matcher — Hệ thống phân tích CV tự động",
         cvSubtitle: "Hệ thống tự động phân tích CV ứng viên và đánh giá mức độ phù hợp với JD thông qua AI",
-        cvStack: ["Python", "FastAPI", "React", "Ollama", "Mistral", "pnpm"],
+        cvStack: ["Python", "FastAPI", "React", "Ollama", "Mistral"],
 
         cvOverviewTitle: "Tổng quan",
         cvOverviewText:
