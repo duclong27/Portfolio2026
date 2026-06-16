@@ -139,8 +139,8 @@ const languages = [
     {
         name: { vi: "Tiếng Anh", en: "English" },
         proficiency: {
-            vi: "Thành thạo giao tiếp, có kinh nghiệm dịch thuật cho doanh nghiệp gia đình. Dự kiến đạt chứng chỉ TOEIC 650 vào tháng 5/2026.",
-            en: "Proficiency in English communication, experienced in translation for family's business. Expected to achieve TOEIC 650 by May 2026."
+            vi: "Thành thạo giao tiếp, có kinh nghiệm dịch thuật cho doanh nghiệp gia đình. Dự kiến đạt chứng chỉ TOEIC 650 vào tháng 6/2026.",
+            en: "Proficiency in English communication, experienced in translation for family's business. Expected to achieve TOEIC 650 by June 2026."
         },
         icon: Languages
     },
