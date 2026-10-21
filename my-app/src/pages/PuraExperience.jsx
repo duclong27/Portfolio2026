@@ -12,7 +12,7 @@ import BlogEditor from "../assets/PuraPictures/BlogEditor.png";
 const content = {
     en: {
         backBtn: "Back to Experience",
-        eyebrow: "Freelance Project · VNConnect 360",
+        eyebrow: "Freelance Project · AQ.LAB Vietnam",
         title: "Pura Ha Giang Loop — Tour Booking Website & Admin CMS",
         subtitle: "A live website for a Ha Giang tour operator serving international travelers",
         stack: ["React", "Vite", "Supabase", "JavaScript", "HTML/CSS"],
@@ -40,7 +40,7 @@ const content = {
 
     vi: {
         backBtn: "Quay lại Kinh nghiệm",
-        eyebrow: "Dự án Freelance · VNConnect 360",
+        eyebrow: "Dự án Freelance · AQ.LAB Việt Nam",
         title: "Pura Ha Giang Loop — Website đặt tour & Trang quản trị",
         subtitle: "Website đang hoạt động cho đơn vị tour Hà Giang, phục vụ khách du lịch quốc tế",
         stack: ["React", "Vite", "Supabase", "JavaScript", "HTML/CSS"],

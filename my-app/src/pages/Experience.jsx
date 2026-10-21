@@ -8,7 +8,7 @@ const experiencesByLang = {
     {
       time: "10/2026 — Present",
       role: "Freelance Fullstack Developer",
-      company: "VNConnect 360",
+      company: "AQ.LAB Vietnam Technology Services Co., Ltd.",
       location: "Hanoi",
       stack: ["React", "Vite", "Supabase", "JavaScript", "HTML/CSS"],
       highlights: [
@@ -81,7 +81,7 @@ const experiencesByLang = {
     {
       time: "10/2026 — Hiện tại",
       role: "Fullstack Developer (Freelance)",
-      company: "VNConnect 360",
+      company: "Công ty TNHH Dịch vụ Công nghệ AQ.LAB Việt Nam",
       location: "Hà Nội",
       stack: ["React", "Vite", "Supabase", "JavaScript", "HTML/CSS"],
       highlights: [
