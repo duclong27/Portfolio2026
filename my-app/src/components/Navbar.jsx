@@ -27,7 +27,9 @@ export default function Navbar() {
             <div className="container navbar__inner">
                 {/* Khối bên trái: nav__eyebrow */}
                 <div className="navbar__block navbar__block--left">
-                    <span className="nav__eyebrow">Portfolio</span>
+                    <NavLink to="/" className="nav__eyebrow nav__eyebrow--link" aria-label={labels.home}>
+                        Portfolio
+                    </NavLink>
                 </div>
 
                 {/* Khối ở giữa: navbar__nav */}

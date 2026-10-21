@@ -1,7 +1,7 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Map, LayoutDashboard, BadgeDollarSign, PenSquare, ExternalLink } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import DemoSlideshow from "../components/DemoSlideshow";
 import ManagePrices from "../assets/PuraPictures/ManagePrices.png";
 import EditServices from "../assets/PuraPictures/EditServices.jpg";
 import BlogEditor from "../assets/PuraPictures/BlogEditor.png";
@@ -71,58 +71,6 @@ const builtIcons = [Map, LayoutDashboard, BadgeDollarSign, PenSquare];
 const LIVE_URL = "https://purahagiangloop.com/";
 
 /* ─────────────────────────────────────────────
-   SLIDESHOW (cùng giao diện với trang SSI)
-───────────────────────────────────────────── */
-function DemoSlideshow({ images }) {
-    const [current, setCurrent] = useState(0);
-    const img = images[current];
-
-    return (
-        <div className="ssi__slideshow">
-            <div className="ssi__slide-img-wrap">
-                <img key={current} src={img.src} alt={img.caption} loading="lazy" />
-            </div>
-
-            <div className="ssi__slide-bar">
-                <button
-                    className="ssi__slide-btn"
-                    onClick={() => setCurrent((c) => Math.max(0, c - 1))}
-                    disabled={current === 0}
-                    aria-label="Previous"
-                >
-                    ‹
-                </button>
-                <span className="ssi__slide-caption">{img.caption}</span>
-                <span className="ssi__slide-counter">
-                    {current + 1} / {images.length}
-                </span>
-                <button
-                    className="ssi__slide-btn"
-                    onClick={() => setCurrent((c) => Math.min(images.length - 1, c + 1))}
-                    disabled={current === images.length - 1}
-                    aria-label="Next"
-                >
-                    ›
-                </button>
-            </div>
-
-            <div className="ssi__slide-dots" role="tablist">
-                {images.map((_, idx) => (
-                    <button
-                        key={idx}
-                        role="tab"
-                        aria-selected={idx === current}
-                        aria-label={`Slide ${idx + 1}`}
-                        className={"ssi__slide-dot" + (idx === current ? " ssi__slide-dot--active" : "")}
-                        onClick={() => setCurrent(idx)}
-                    />
-                ))}
-            </div>
-        </div>
-    );
-}
-
-/* ─────────────────────────────────────────────
    MAIN COMPONENT
 ───────────────────────────────────────────── */
 export default function PuraExperience() {
@@ -130,19 +78,19 @@ export default function PuraExperience() {
     const t = content[lang];
 
     return (
-        <section className="ssi container">
-            <div className="ssi__back-row">
-                <Link to="/experience" className="ssi__back-btn">
+        <section className="detail container">
+            <div className="detail__back-row">
+                <Link to="/experience" className="detail__back-btn">
                     <ArrowLeft size={18} aria-hidden="true" />
                     <span>{t.backBtn}</span>
                 </Link>
             </div>
 
-            <header className="ssi__header">
-                <span className="ssi__eyebrow">{t.eyebrow}</span>
-                <h1 className="ssi__title">{t.title}</h1>
-                <p className="ssi__subtitle">{t.subtitle}</p>
-                <div className="ssi__stack">
+            <header className="detail__header">
+                <span className="detail__eyebrow">{t.eyebrow}</span>
+                <h1 className="detail__title">{t.title}</h1>
+                <p className="detail__subtitle">{t.subtitle}</p>
+                <div className="detail__stack">
                     {t.stack.map((tech) => (
                         <span key={tech} className="chip">{tech}</span>
                     ))}
@@ -158,20 +106,20 @@ export default function PuraExperience() {
                 </a>
             </header>
 
-            <div className="ssi__panel">
-                <div className="ssi__section">
-                    <h2 className="ssi__section-title">{t.overviewTitle}</h2>
-                    <p className="ssi__body">{t.overviewText}</p>
+            <div className="detail__panel">
+                <div className="detail__section">
+                    <h2 className="detail__section-title">{t.overviewTitle}</h2>
+                    <p className="detail__body">{t.overviewText}</p>
                 </div>
 
-                <div className="ssi__section">
-                    <h2 className="ssi__section-title">{t.builtTitle}</h2>
-                    <ul className="ssi__built-list">
+                <div className="detail__section">
+                    <h2 className="detail__section-title">{t.builtTitle}</h2>
+                    <ul className="detail__built-list">
                         {t.builtItems.map((item, idx) => {
                             const Icon = builtIcons[idx] ?? Map;
                             return (
-                                <li key={idx} className="ssi__built-item">
-                                    <span className="ssi__built-icon" aria-hidden="true">
+                                <li key={idx} className="detail__built-item">
+                                    <span className="detail__built-icon" aria-hidden="true">
                                         <Icon size={18} />
                                     </span>
                                     <span>{item}</span>
@@ -182,13 +130,13 @@ export default function PuraExperience() {
                 </div>
             </div>
 
-            <div className="ssi__section">
-                <h2 className="ssi__section-title">{t.demoTitle}</h2>
+            <div className="detail__section">
+                <h2 className="detail__section-title">{t.demoTitle}</h2>
                 <DemoSlideshow images={t.demoImages} />
             </div>
 
-            <div className="ssi__back-row ssi__back-row--bottom">
-                <Link to="/experience" className="ssi__back-btn">
+            <div className="detail__back-row detail__back-row--bottom">
+                <Link to="/experience" className="detail__back-btn">
                     <ArrowLeft size={18} aria-hidden="true" />
                     <span>{t.backBtn}</span>
                 </Link>
