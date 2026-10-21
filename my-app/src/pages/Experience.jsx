@@ -9,7 +9,7 @@ const experiencesByLang = {
       time: "10/2026 — Present",
       role: "Freelance Fullstack Developer",
       company: "AQ.LAB Vietnam Technology Services Co., Ltd.",
-      location: "Hanoi",
+      location: "Phu Tho",
       stack: ["React", "Vite", "Supabase", "JavaScript", "HTML/CSS"],
       highlights: [
         "Built and deployed Pura Ha Giang Loop, a live tour booking website.",
@@ -81,7 +81,7 @@ const experiencesByLang = {
       time: "10/2026 — Hiện tại",
       role: "Fullstack Developer (Freelance)",
       company: "Công ty TNHH Dịch vụ Công nghệ AQ.LAB Việt Nam",
-      location: "Hà Nội",
+      location: "Phú Thọ",
       stack: ["React", "Vite", "Supabase", "JavaScript", "HTML/CSS"],
       highlights: [
         "Xây dựng và triển khai Pura Ha Giang Loop, website đặt tour đang hoạt động.",
