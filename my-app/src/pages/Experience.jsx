@@ -6,6 +6,20 @@ const coreStacks = ["Java Spring Boot", "JavaScript", "TypeScript", "Node.js", "
 const experiencesByLang = {
   en: [
     {
+      time: "10/2026 — Present",
+      role: "Freelance Fullstack Developer",
+      company: "VNConnect 360",
+      location: "Hanoi",
+      stack: ["React", "Vite", "Supabase", "JavaScript", "HTML/CSS"],
+      highlights: [
+        "Developed and deployed Pura Ha Giang Loop, a live tour booking website for a Ha Giang tour operator serving international travelers.",
+        "Built tour listings, booking & rates, services, blog and contact pages, plus an interactive Ha Giang Loop route map with 13 clickable stops showing photos, elevation and local tips.",
+        "Implemented media management with Supabase Storage, serving optimized WebP images in multiple sizes for fast page loads.",
+      ],
+      liveLink: "https://purahagiangloop.com/",
+      liveLabel: "Visit live website ↗",
+    },
+    {
       time: "02/2026 — 04/2026",
       role: "Process Automation Intern",
       company: "SSI Securities Corporation ",
@@ -61,6 +75,20 @@ const experiencesByLang = {
   ],
 
   vi: [
+    {
+      time: "10/2026 — Hiện tại",
+      role: "Fullstack Developer (Freelance)",
+      company: "VNConnect 360",
+      location: "Hà Nội",
+      stack: ["React", "Vite", "Supabase", "JavaScript", "HTML/CSS"],
+      highlights: [
+        "Phát triển và triển khai Pura Ha Giang Loop, website đặt tour đang hoạt động thực tế cho một đơn vị tour Hà Giang, phục vụ khách du lịch quốc tế.",
+        "Xây dựng các trang tour, bảng giá & đặt tour, dịch vụ, blog, liên hệ và bản đồ cung đường Hà Giang Loop tương tác với 13 điểm dừng kèm ảnh, độ cao và mẹo du lịch.",
+        "Quản lý media bằng Supabase Storage, tối ưu ảnh WebP nhiều kích thước giúp trang tải nhanh.",
+      ],
+      liveLink: "https://purahagiangloop.com/",
+      liveLabel: "Xem website đang chạy ↗",
+    },
     {
       time: "02/2026 — 04/2026",
       role: "Thực tập sinh Tự động hóa quy trình",
@@ -236,6 +264,20 @@ export default function Experience() {
                     <Link to={exp.detailLink} className="exp__detail-btn">
                       {exp.detailLabel}
                     </Link>
+                  </div>
+                )}
+
+                {/* Nút mở website live — link ngoài nên dùng thẻ <a> */}
+                {exp.liveLink && (
+                  <div className="exp__detail-row">
+                    <a
+                      href={exp.liveLink}
+                      className="exp__detail-btn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {exp.liveLabel}
+                    </a>
                   </div>
                 )}
               </div>
