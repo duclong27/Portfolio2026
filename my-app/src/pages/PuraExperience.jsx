@@ -13,8 +13,8 @@ const content = {
     en: {
         backBtn: "Back to Experience",
         eyebrow: "Freelance Project · AQ.LAB Vietnam",
-        title: "Pura Ha Giang Loop — Tour Booking Website & Admin CMS",
-        subtitle: "A live website for a Ha Giang tour operator serving international travelers",
+        title: "Pura Ha Giang Loop",
+        subtitle: "Tour booking website & admin CMS for a Ha Giang tour operator",
         stack: ["React", "Vite", "Supabase", "JavaScript", "HTML/CSS"],
         liveLabel: "Visit live website",
 
@@ -41,8 +41,8 @@ const content = {
     vi: {
         backBtn: "Quay lại Kinh nghiệm",
         eyebrow: "Dự án Freelance · AQ.LAB Việt Nam",
-        title: "Pura Ha Giang Loop — Website đặt tour & Trang quản trị",
-        subtitle: "Website đang hoạt động cho đơn vị tour Hà Giang, phục vụ khách du lịch quốc tế",
+        title: "Pura Ha Giang Loop",
+        subtitle: "Website đặt tour & trang quản trị cho đơn vị tour Hà Giang",
         stack: ["React", "Vite", "Supabase", "JavaScript", "HTML/CSS"],
         liveLabel: "Xem website đang chạy",
 

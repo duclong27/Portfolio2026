@@ -1952,3 +1952,229 @@ video {
         font-size: 12.5px;
     }
 }
+
+/* =======================================================================
+   6) RESPONSIVE FIXES — tiêu đề 1 dòng + tối ưu mobile/desktop
+   - Đặt cuối file để ghi đè các rule phía trên
+   ======================================================================= */
+
+/* Nút đổi ngôn ngữ: desktop hiện chữ đầy đủ, mobile hiện EN/VI */
+.nav-lang-short { display: none; }
+
+/* Tiêu đề lớn tự cân bằng khi buộc phải xuống dòng (tránh 1 chữ mồ côi) */
+h1, h2 { text-wrap: balance; }
+
+/* ---------- HOME HERO ----------
+   Cột chữ chiếm hết phần còn lại, ảnh giữ kích thước cố định
+   → tiêu đề "Tên — Fullstack Developer" vừa 1 dòng trên desktop */
+.home__grid {
+    grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.home__title {
+    white-space: nowrap;
+    /* ~19.4em là bề rộng tiêu đề; trừ cột ảnh (~420px) */
+    font-size: clamp(28px, calc((100vw - 440px) / 20), 48px);
+    line-height: 1.15;
+}
+
+.home__portrait-frame {
+    width: 340px;
+}
+
+/* ---------- TABLET + LAPTOP NHỎ (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+    .home__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home__title {
+        font-size: clamp(24px, calc((100vw - 48px) / 20), 44px);
+    }
+
+    .home__cta {
+        padding-top: var(--space-3);
+    }
+
+    .home__portrait {
+        justify-content: center;
+    }
+
+    .home__portrait-frame {
+        width: min(320px, 100%);
+    }
+}
+
+/* ---------- MOBILE NAVBAR (≤ 768px) ----------
+   Hàng 1: logo trái + nút ngôn ngữ phải. Hàng 2: menu điều hướng.
+   height:auto để navbar tự cao theo nội dung, không đè lên trang */
+@media (max-width: 768px) {
+    :root {
+        --navbar-h: auto;
+    }
+
+    .navbar {
+        height: auto;
+    }
+
+    .navbar__inner {
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "brand lang"
+            "nav   nav";
+        gap: 8px;
+        padding-block: 10px;
+    }
+
+    .navbar__block {
+        height: auto;
+    }
+
+    .navbar__block--left {
+        grid-area: brand;
+        justify-content: flex-start;
+    }
+
+    .navbar__block--right {
+        grid-area: lang;
+        justify-content: flex-end;
+    }
+
+    .navbar__block--center {
+        grid-area: nav;
+        justify-content: center;
+    }
+
+    .navbar__nav {
+        flex-wrap: nowrap;
+        gap: 6px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav__eyebrow,
+    .nav-link,
+    .nav-lang-btn {
+        font-size: 15px;
+        padding: 7px 12px;
+    }
+
+    .nav-link {
+        flex: 1;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .nav-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .nav-lang-full { display: none; }
+    .nav-lang-short { display: inline; }
+}
+
+/* ---------- MOBILE CONTENT (≤ 640px) ---------- */
+@media (max-width: 640px) {
+    /* Tiêu đề Home: tên 1 dòng, vai trò 1 dòng — gọn và cân đối */
+    .home__title {
+        white-space: normal;
+        font-size: clamp(28px, 8.4vw, 36px);
+    }
+
+    .home__title-sep { display: none; }
+
+    .home__title-name,
+    .home__title-role {
+        display: block;
+        white-space: nowrap;
+    }
+
+    .home__title-role {
+        font-size: 0.72em;
+        color: #4c1d95;
+        margin-top: 4px;
+    }
+
+    .home__lead {
+        font-size: 17px;
+    }
+
+    .home__cta {
+        font-size: 17px;
+    }
+
+    .home__cta .home__btn {
+        flex: 1;
+    }
+
+    .exp__title,
+    .projects__title {
+        font-size: 34px;
+    }
+
+    .exp__lead {
+        font-size: 17px;
+    }
+
+    .ssi__title {
+        font-size: 26px;
+    }
+
+    .ssi__subtitle {
+        font-size: 16px;
+    }
+
+    .exp__detail-btn {
+        font-size: 14px;
+        padding: 9px 16px;
+    }
+}
+
+/* ---------- LAPTOP NHỎ / TABLET NGANG (769px – 1100px) ----------
+   Chữ menu 25px quá to cho khoảng này → thu nhỏ để menu nằm gọn 1 hàng */
+@media (min-width: 769px) and (max-width: 1100px) {
+    .nav__eyebrow,
+    .nav-link,
+    .nav-lang-btn {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+
+    .nav-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .navbar__nav {
+        flex-wrap: nowrap;
+    }
+
+    .nav-lang-full { display: none; }
+    .nav-lang-short { display: inline; }
+}
+
+/* Chữ trong nút menu không bao giờ gãy dòng */
+.nav-link,
+.nav-lang-btn,
+.nav__eyebrow {
+    white-space: nowrap;
+}
+
+/* Tablet dọc: tiêu đề trang chi tiết co theo màn hình để vừa 1 dòng */
+@media (min-width: 641px) and (max-width: 900px) {
+    .ssi__title {
+        font-size: clamp(24px, calc((100vw - 48px) / 25), 34px);
+    }
+}
+
+/* Điện thoại nhỏ: bỏ icon trong menu để 3 nút vừa 1 hàng */
+@media (max-width: 400px) {
+    .navbar__nav .nav-icon {
+        display: none;
+    }
+
+    .nav-link {
+        padding: 7px 8px;
+    }
+}

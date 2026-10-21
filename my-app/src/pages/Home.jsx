@@ -20,7 +20,7 @@ import duclongPortrait from "../assets/LongPotrait.jpg";
 
 const content = {
     vi: {
-        heroTitle: " Nguyễn Đức Long — Fullstack Developer",
+        heroTitle: "Nguyễn Đức Long — Fullstack Developer",
         heroLead:
             "Xây dựng ứng dụng web sạch, dễ bảo trì, chú trọng performance, bảo mật và trải nghiệm người dùng.",
         ctaProfile: "Xem Profile",
@@ -155,7 +155,12 @@ export default function Home() {
             <div className="home__grid">
                 <div className="home__intro">
 
-                    <h1 className="home__title">{t.heroTitle}</h1>
+                    <h1 className="home__title">
+                        {/* Tách tên và vai trò: desktop 1 dòng, mobile tên và vai trò mỗi thứ 1 dòng */}
+                        <span className="home__title-name">{t.heroTitle.split(" — ")[0]}</span>
+                        <span className="home__title-sep"> — </span>
+                        <span className="home__title-role">{t.heroTitle.split(" — ")[1]}</span>
+                    </h1>
                     <p className="home__lead">{t.heroLead}</p>
 
                     <div className="home__cta">

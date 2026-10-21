@@ -27,7 +27,7 @@ export default function Navbar() {
             <div className="container navbar__inner">
                 {/* Khối bên trái: nav__eyebrow */}
                 <div className="navbar__block navbar__block--left">
-                    <span className="nav__eyebrow">Portfolio · 2026</span>
+                    <span className="nav__eyebrow">Portfolio</span>
                 </div>
 
                 {/* Khối ở giữa: navbar__nav */}
@@ -57,7 +57,8 @@ export default function Navbar() {
                         aria-label={lang === "vi" ? "Chuyển sang tiếng Anh" : "Switch to Vietnamese"}
                     >
                         <Languages className="nav-icon" aria-hidden="true" />
-                        <span>{lang === "vi" ? "PHIÊN BẢN TIẾNG VIỆT" : "ENGLISH VERISON"}</span>
+                        <span className="nav-lang-full">{lang === "vi" ? "PHIÊN BẢN TIẾNG VIỆT" : "ENGLISH VERSION"}</span>
+                        <span className="nav-lang-short">{lang === "vi" ? "VI" : "EN"}</span>
                     </button>
                 </div>
             </div>
