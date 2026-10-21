@@ -588,6 +588,9 @@ video {
    (khoảng dòng 588, sau phần Pill and Chip Styles)              */
 
 .exp__detail-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
     margin-top: var(--space-4);
     padding-top: var(--space-3);
     border-top: 1px solid rgba(124, 58, 237, 0.12);

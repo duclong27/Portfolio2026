@@ -17,6 +17,8 @@ const experiencesByLang = {
         "Built an admin CMS so the client can run the site without a developer: edit page content and images in place, manage tour add-on and transport prices that update instantly for guests, and write blog posts with drafts, preview and publishing.",
         "Implemented media management with Supabase Storage, serving optimized WebP images in multiple sizes for fast page loads.",
       ],
+      detailLink: "/PuraExperience",
+      detailLabel: "View project details →",
       liveLink: "https://purahagiangloop.com/",
       liveLabel: "Visit live website ↗",
     },
@@ -88,6 +90,8 @@ const experiencesByLang = {
         "Xây dựng trang quản trị (CMS) giúp khách hàng tự vận hành website: chỉnh sửa nội dung và hình ảnh trực tiếp trên trang, quản lý giá dịch vụ và tuyến xe áp dụng ngay cho khách đặt tour, viết blog với lưu nháp, xem trước và xuất bản.",
         "Quản lý media bằng Supabase Storage, tối ưu ảnh WebP nhiều kích thước giúp trang tải nhanh.",
       ],
+      detailLink: "/PuraExperience",
+      detailLabel: "Xem chi tiết dự án →",
       liveLink: "https://purahagiangloop.com/",
       liveLabel: "Xem website đang chạy ↗",
     },
@@ -260,26 +264,24 @@ export default function Experience() {
                   ))}
                 </ul>
 
-                {/* Nút "Xem chi tiết" — chỉ render nếu card có detailLink */}
-                {exp.detailLink && (
+                {/* Nút "Xem chi tiết" và nút mở website live — chỉ render nếu card có link */}
+                {(exp.detailLink || exp.liveLink) && (
                   <div className="exp__detail-row">
-                    <Link to={exp.detailLink} className="exp__detail-btn">
-                      {exp.detailLabel}
-                    </Link>
-                  </div>
-                )}
-
-                {/* Nút mở website live — link ngoài nên dùng thẻ <a> */}
-                {exp.liveLink && (
-                  <div className="exp__detail-row">
-                    <a
-                      href={exp.liveLink}
-                      className="exp__detail-btn"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {exp.liveLabel}
-                    </a>
+                    {exp.detailLink && (
+                      <Link to={exp.detailLink} className="exp__detail-btn">
+                        {exp.detailLabel}
+                      </Link>
+                    )}
+                    {exp.liveLink && (
+                      <a
+                        href={exp.liveLink}
+                        className="exp__detail-btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {exp.liveLabel}
+                      </a>
+                    )}
                   </div>
                 )}
               </div>
