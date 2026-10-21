@@ -14,6 +14,7 @@ const experiencesByLang = {
       highlights: [
         "Developed and deployed Pura Ha Giang Loop, a live tour booking website for a Ha Giang tour operator serving international travelers.",
         "Built tour listings, booking & rates, services, blog and contact pages, plus an interactive Ha Giang Loop route map with 13 clickable stops showing photos, elevation and local tips.",
+        "Built an admin CMS so the client can run the site without a developer: edit page content and images in place, manage tour add-on and transport prices that update instantly for guests, and write blog posts with drafts, preview and publishing.",
         "Implemented media management with Supabase Storage, serving optimized WebP images in multiple sizes for fast page loads.",
       ],
       liveLink: "https://purahagiangloop.com/",
@@ -84,6 +85,7 @@ const experiencesByLang = {
       highlights: [
         "Phát triển và triển khai Pura Ha Giang Loop, website đặt tour đang hoạt động thực tế cho một đơn vị tour Hà Giang, phục vụ khách du lịch quốc tế.",
         "Xây dựng các trang tour, bảng giá & đặt tour, dịch vụ, blog, liên hệ và bản đồ cung đường Hà Giang Loop tương tác với 13 điểm dừng kèm ảnh, độ cao và mẹo du lịch.",
+        "Xây dựng trang quản trị (CMS) giúp khách hàng tự vận hành website: chỉnh sửa nội dung và hình ảnh trực tiếp trên trang, quản lý giá dịch vụ và tuyến xe áp dụng ngay cho khách đặt tour, viết blog với lưu nháp, xem trước và xuất bản.",
         "Quản lý media bằng Supabase Storage, tối ưu ảnh WebP nhiều kích thước giúp trang tải nhanh.",
       ],
       liveLink: "https://purahagiangloop.com/",
