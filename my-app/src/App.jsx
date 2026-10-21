@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import ScrollToTop from "./components/ScrollToTop";
 import { LanguageProvider } from "./context/LanguageContext";
 
 import Home from "./pages/Home";
@@ -11,6 +12,7 @@ import PuraExperience from "./pages/PuraExperience";
 export default function App() {
   return (
     <LanguageProvider>
+      <ScrollToTop />
       <div className="app">
         <Navbar />
 
