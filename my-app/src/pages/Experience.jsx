@@ -10,16 +10,18 @@ const experiencesByLang = {
       role: "Freelance Fullstack Developer",
       company: "AQ.LAB Vietnam Technology Services Co., Ltd.",
       location: "Phu Tho",
-      stack: ["React", "Vite", "Supabase", "JavaScript", "HTML/CSS"],
+      stack: ["Next.js", "React", "TypeScript", "Supabase", "Tailwind CSS", "Docker"],
       highlights: [
-        "Built and deployed Pura Ha Giang Loop, a live tour booking website.",
-        "Developed an interactive route map and tour, booking and blog pages.",
-        "Built an admin CMS to manage content, prices and blog posts.",
+        "Built and deployed Achi Home Montessori, a 33-page kindergarten website with a custom admin CMS, self-hosted on the company VPS with Docker.",
+        "Built and deployed Pura Ha Giang Loop, a live tour booking website with an interactive route map and booking pages.",
+        "Built admin CMSs so clients can manage registrations, content, prices and blog posts without a developer.",
       ],
-      detailLink: "/PuraExperience",
-      detailLabel: "View project details →",
-      liveLink: "https://purahagiangloop.com/",
-      liveLabel: "Visit live website ↗",
+      links: [
+        { to: "/AchiExperience", label: "Achi Home – details →" },
+        { href: "https://achihome.edu.vn/", label: "achihome.edu.vn ↗" },
+        { to: "/PuraExperience", label: "Pura Ha Giang – details →" },
+        { href: "https://purahagiangloop.com/", label: "purahagiangloop.com ↗" },
+      ],
     },
     {
       time: "02/2026 — 04/2026",
@@ -82,16 +84,18 @@ const experiencesByLang = {
       role: "Fullstack Developer (Freelance)",
       company: "Công ty TNHH Dịch vụ Công nghệ AQ.LAB Việt Nam",
       location: "Phú Thọ",
-      stack: ["React", "Vite", "Supabase", "JavaScript", "HTML/CSS"],
+      stack: ["Next.js", "React", "TypeScript", "Supabase", "Tailwind CSS", "Docker"],
       highlights: [
-        "Xây dựng và triển khai Pura Ha Giang Loop, website đặt tour đang hoạt động.",
-        "Phát triển bản đồ cung đường tương tác cùng các trang tour, đặt tour và blog.",
-        "Xây dựng trang quản trị để quản lý nội dung, giá và bài blog.",
+        "Xây dựng và triển khai Achi Home Montessori, website trường mầm non 33 trang kèm trang quản trị riêng, tự triển khai trên VPS công ty bằng Docker.",
+        "Xây dựng và triển khai Pura Ha Giang Loop, website đặt tour đang hoạt động với bản đồ cung đường tương tác và các trang đặt tour.",
+        "Xây dựng trang quản trị giúp khách hàng tự quản lý đăng ký, nội dung, giá và bài viết mà không cần lập trình viên.",
       ],
-      detailLink: "/PuraExperience",
-      detailLabel: "Xem chi tiết dự án →",
-      liveLink: "https://purahagiangloop.com/",
-      liveLabel: "Xem website đang chạy ↗",
+      links: [
+        { to: "/AchiExperience", label: "Achi Home – xem chi tiết →" },
+        { href: "https://achihome.edu.vn/", label: "achihome.edu.vn ↗" },
+        { to: "/PuraExperience", label: "Pura Ha Giang – xem chi tiết →" },
+        { href: "https://purahagiangloop.com/", label: "purahagiangloop.com ↗" },
+      ],
     },
     {
       time: "02/2026 — 04/2026",
@@ -263,6 +267,28 @@ export default function Experience() {
                 </ul>
 
                 {/* Nút "Xem chi tiết" và nút mở website live — chỉ render nếu card có link */}
+                {exp.links && (
+                  <div className="exp__detail-row">
+                    {exp.links.map((l) =>
+                      l.to ? (
+                        <Link key={l.label} to={l.to} className="exp__detail-btn">
+                          {l.label}
+                        </Link>
+                      ) : (
+                        <a
+                          key={l.label}
+                          href={l.href}
+                          className="exp__detail-btn"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {l.label}
+                        </a>
+                      )
+                    )}
+                  </div>
+                )}
+
                 {(exp.detailLink || exp.liveLink) && (
                   <div className="exp__detail-row">
                     {exp.detailLink && (
