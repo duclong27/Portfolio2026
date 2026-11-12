@@ -9,6 +9,7 @@ import Projects from "./pages/Projects";
 import SSIExperience from "./pages/SSIExperience";
 import PuraExperience from "./pages/PuraExperience";
 import AchiExperience from "./pages/AchiExperience";
+import KaitranExperience from "./pages/KaitranExperience";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
             <Route path="/SSIExperience" element={<SSIExperience />} />
             <Route path="/PuraExperience" element={<PuraExperience />} />
             <Route path="/AchiExperience" element={<AchiExperience />} />
+            <Route path="/KaitranExperience" element={<KaitranExperience />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

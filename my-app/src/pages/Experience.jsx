@@ -10,10 +10,11 @@ const experiencesByLang = {
       role: "Freelance Fullstack Developer",
       company: "AQ.LAB Vietnam Technology Services Co., Ltd.",
       location: "Phu Tho",
-      stack: ["Next.js", "React", "TypeScript", "Supabase", "Tailwind CSS", "Docker"],
+      stack: ["Next.js", "React", "TypeScript", "Supabase", "Tailwind CSS", "Docker", "WordPress", "PHP"],
       highlights: [
         "Built and deployed Achi Home Montessori, a 33-page kindergarten website with a custom admin CMS, self-hosted on the company VPS with Docker.",
         "Built and deployed Pura Ha Giang Loop, a live tour booking website with an interactive route map and booking pages.",
+        "Built Kaitran Villas, a 5-language villa rental website on a custom WordPress theme with booking request management.",
         "Built admin CMSs so clients can manage registrations, content, prices and blog posts without a developer.",
       ],
       links: [
@@ -21,6 +22,8 @@ const experiencesByLang = {
         { href: "https://achihome.edu.vn/", label: "achihome.edu.vn ↗" },
         { to: "/PuraExperience", label: "Pura Ha Giang – details →" },
         { href: "https://purahagiangloop.com/", label: "purahagiangloop.com ↗" },
+        { to: "/KaitranExperience", label: "Kaitran Villas – details →" },
+        { href: "https://kaitranvillas.com/", label: "kaitranvillas.com ↗" },
       ],
     },
     {
@@ -84,10 +87,11 @@ const experiencesByLang = {
       role: "Fullstack Developer (Freelance)",
       company: "Công ty TNHH Dịch vụ Công nghệ AQ.LAB Việt Nam",
       location: "Phú Thọ",
-      stack: ["Next.js", "React", "TypeScript", "Supabase", "Tailwind CSS", "Docker"],
+      stack: ["Next.js", "React", "TypeScript", "Supabase", "Tailwind CSS", "Docker", "WordPress", "PHP"],
       highlights: [
         "Xây dựng và triển khai Achi Home Montessori, website trường mầm non 33 trang kèm trang quản trị riêng, tự triển khai trên VPS công ty bằng Docker.",
         "Xây dựng và triển khai Pura Ha Giang Loop, website đặt tour đang hoạt động với bản đồ cung đường tương tác và các trang đặt tour.",
+        "Xây dựng Kaitran Villas, website cho thuê villa 5 ngôn ngữ trên theme WordPress riêng, có quản lý yêu cầu đặt.",
         "Xây dựng trang quản trị giúp khách hàng tự quản lý đăng ký, nội dung, giá và bài viết mà không cần lập trình viên.",
       ],
       links: [
@@ -95,6 +99,8 @@ const experiencesByLang = {
         { href: "https://achihome.edu.vn/", label: "achihome.edu.vn ↗" },
         { to: "/PuraExperience", label: "Pura Ha Giang – xem chi tiết →" },
         { href: "https://purahagiangloop.com/", label: "purahagiangloop.com ↗" },
+        { to: "/KaitranExperience", label: "Kaitran Villas – xem chi tiết →" },
+        { href: "https://kaitranvillas.com/", label: "kaitranvillas.com ↗" },
       ],
     },
     {
