@@ -26,7 +26,7 @@ const content = {
         ctaProfile: "Xem Profile",
         ctaContact: "Liên hệ nhanh",
         stats: [
-            { value: "8+", label: "Tháng kinh nghiệm" },
+            { value: "1+", label: "Năm kinh nghiệm" },
             { value: "6+", label: "Dự án đã triển khai" },
             { value: "99.9%", label: "Uptime đã duy trì" },
         ],
@@ -62,7 +62,7 @@ const content = {
         ctaProfile: "View Profile",
         ctaContact: "Quick contact",
         stats: [
-            { value: "8+", label: "Months of experience" },
+            { value: "1+", label: "Years of experience" },
             { value: "6+", label: "Shipped projects" },
             { value: "99.9%", label: "Uptime maintained" },
         ],
