@@ -27,7 +27,7 @@ const content = {
         ctaContact: "Liên hệ nhanh",
         stats: [
             { value: "8+", label: "Tháng kinh nghiệm" },
-            { value: "3+", label: "Dự án đã triển khai" },
+            { value: "6+", label: "Dự án đã triển khai" },
             { value: "99.9%", label: "Uptime đã duy trì" },
         ],
         aboutTitle: "Về tôi",
@@ -63,7 +63,7 @@ const content = {
         ctaContact: "Quick contact",
         stats: [
             { value: "8+", label: "Months of experience" },
-            { value: "3+", label: "Shipped projects" },
+            { value: "6+", label: "Shipped projects" },
             { value: "99.9%", label: "Uptime maintained" },
         ],
         aboutTitle: "About",

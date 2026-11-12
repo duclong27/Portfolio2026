@@ -15,6 +15,7 @@ const experiencesByLang = {
         "Built and deployed Achi Home Montessori, a 33-page kindergarten website with a custom admin CMS, self-hosted on the company VPS with Docker.",
         "Built and deployed Pura Ha Giang Loop, a live tour booking website with an interactive route map and booking pages.",
         "Built Kaitran Villas, a 5-language villa rental website on a custom WordPress theme with booking request management.",
+        "Built a bilingual (VI/EN) portfolio landing page for event project manager Phúc Huy, with a custom content admin.",
         "Built admin CMSs so clients can manage registrations, content, prices and blog posts without a developer.",
       ],
       links: [
@@ -24,6 +25,8 @@ const experiencesByLang = {
         { href: "https://purahagiangloop.com/", label: "purahagiangloop.com ↗" },
         { to: "/KaitranExperience", label: "Kaitran Villas – details →" },
         { href: "https://kaitranvillas.com/", label: "kaitranvillas.com ↗" },
+        { to: "/PhucHuyExperience", label: "Phúc Huy – details →" },
+        { href: "https://huynp18.com/", label: "huynp18.com ↗" },
       ],
     },
     {
@@ -92,6 +95,7 @@ const experiencesByLang = {
         "Xây dựng và triển khai Achi Home Montessori, website trường mầm non 33 trang kèm trang quản trị riêng, tự triển khai trên VPS công ty bằng Docker.",
         "Xây dựng và triển khai Pura Ha Giang Loop, website đặt tour đang hoạt động với bản đồ cung đường tương tác và các trang đặt tour.",
         "Xây dựng Kaitran Villas, website cho thuê villa 5 ngôn ngữ trên theme WordPress riêng, có quản lý yêu cầu đặt.",
+        "Xây dựng landing page portfolio song ngữ (VI/EN) cho quản lý dự án sự kiện Phúc Huy, kèm trang quản trị nội dung riêng.",
         "Xây dựng trang quản trị giúp khách hàng tự quản lý đăng ký, nội dung, giá và bài viết mà không cần lập trình viên.",
       ],
       links: [
@@ -101,6 +105,8 @@ const experiencesByLang = {
         { href: "https://purahagiangloop.com/", label: "purahagiangloop.com ↗" },
         { to: "/KaitranExperience", label: "Kaitran Villas – xem chi tiết →" },
         { href: "https://kaitranvillas.com/", label: "kaitranvillas.com ↗" },
+        { to: "/PhucHuyExperience", label: "Phúc Huy – xem chi tiết →" },
+        { href: "https://huynp18.com/", label: "huynp18.com ↗" },
       ],
     },
     {
@@ -217,7 +223,7 @@ export default function Experience() {
         <aside className="exp__aside">
           <div className="exp__stat-card">
             <p className="exp__stat-label">{t.shippedLabel}</p>
-            <p className="exp__stat-value">3+</p>
+            <p className="exp__stat-value">6+</p>
             <p className="exp__stat-desc">{t.shippedDesc}</p>
           </div>
 

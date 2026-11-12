@@ -10,6 +10,7 @@ import SSIExperience from "./pages/SSIExperience";
 import PuraExperience from "./pages/PuraExperience";
 import AchiExperience from "./pages/AchiExperience";
 import KaitranExperience from "./pages/KaitranExperience";
+import PhucHuyExperience from "./pages/PhucHuyExperience";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
             <Route path="/PuraExperience" element={<PuraExperience />} />
             <Route path="/AchiExperience" element={<AchiExperience />} />
             <Route path="/KaitranExperience" element={<KaitranExperience />} />
+            <Route path="/PhucHuyExperience" element={<PhucHuyExperience />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
