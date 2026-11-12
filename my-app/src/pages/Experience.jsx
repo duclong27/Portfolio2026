@@ -6,7 +6,7 @@ const coreStacks = ["Java Spring Boot", "JavaScript", "TypeScript", "Node.js", "
 const experiencesByLang = {
   en: [
     {
-      time: "10/2026 — Present",
+      time: "09/2026 — Present",
       role: "Freelance Fullstack Developer",
       company: "AQ.LAB Vietnam Technology Services Co., Ltd.",
       location: "Phu Tho",
@@ -18,15 +18,11 @@ const experiencesByLang = {
         "Built a bilingual (VI/EN) portfolio landing page for event project manager Phúc Huy, with a custom content admin.",
         "Built admin CMSs so clients can manage registrations, content, prices and blog posts without a developer.",
       ],
-      links: [
-        { to: "/AchiExperience", label: "Achi Home – details →" },
-        { href: "https://achihome.edu.vn/", label: "achihome.edu.vn ↗" },
-        { to: "/PuraExperience", label: "Pura Ha Giang – details →" },
-        { href: "https://purahagiangloop.com/", label: "purahagiangloop.com ↗" },
-        { to: "/KaitranExperience", label: "Kaitran Villas – details →" },
-        { href: "https://kaitranvillas.com/", label: "kaitranvillas.com ↗" },
-        { to: "/PhucHuyExperience", label: "Phúc Huy – details →" },
-        { href: "https://huynp18.com/", label: "huynp18.com ↗" },
+      projects: [
+        { detail: "/AchiExperience", detailLabel: "Achi Home – details →", live: "https://achihome.edu.vn/", liveLabel: "achihome.edu.vn ↗" },
+        { detail: "/PuraExperience", detailLabel: "Pura Ha Giang – details →", live: "https://purahagiangloop.com/", liveLabel: "purahagiangloop.com ↗" },
+        { detail: "/KaitranExperience", detailLabel: "Kaitran Villas – details →", live: "https://kaitranvillas.com/", liveLabel: "kaitranvillas.com ↗" },
+        { detail: "/PhucHuyExperience", detailLabel: "Phúc Huy – details →", live: "https://huynp18.com/", liveLabel: "huynp18.com ↗" },
       ],
     },
     {
@@ -86,7 +82,7 @@ const experiencesByLang = {
 
   vi: [
     {
-      time: "10/2026 — Hiện tại",
+      time: "09/2026 — Hiện tại",
       role: "Fullstack Developer (Freelance)",
       company: "Công ty TNHH Dịch vụ Công nghệ AQ.LAB Việt Nam",
       location: "Phú Thọ",
@@ -98,15 +94,11 @@ const experiencesByLang = {
         "Xây dựng landing page portfolio song ngữ (VI/EN) cho quản lý dự án sự kiện Phúc Huy, kèm trang quản trị nội dung riêng.",
         "Xây dựng trang quản trị giúp khách hàng tự quản lý đăng ký, nội dung, giá và bài viết mà không cần lập trình viên.",
       ],
-      links: [
-        { to: "/AchiExperience", label: "Achi Home – xem chi tiết →" },
-        { href: "https://achihome.edu.vn/", label: "achihome.edu.vn ↗" },
-        { to: "/PuraExperience", label: "Pura Ha Giang – xem chi tiết →" },
-        { href: "https://purahagiangloop.com/", label: "purahagiangloop.com ↗" },
-        { to: "/KaitranExperience", label: "Kaitran Villas – xem chi tiết →" },
-        { href: "https://kaitranvillas.com/", label: "kaitranvillas.com ↗" },
-        { to: "/PhucHuyExperience", label: "Phúc Huy – xem chi tiết →" },
-        { href: "https://huynp18.com/", label: "huynp18.com ↗" },
+      projects: [
+        { detail: "/AchiExperience", detailLabel: "Achi Home – xem chi tiết →", live: "https://achihome.edu.vn/", liveLabel: "achihome.edu.vn ↗" },
+        { detail: "/PuraExperience", detailLabel: "Pura Ha Giang – xem chi tiết →", live: "https://purahagiangloop.com/", liveLabel: "purahagiangloop.com ↗" },
+        { detail: "/KaitranExperience", detailLabel: "Kaitran Villas – xem chi tiết →", live: "https://kaitranvillas.com/", liveLabel: "kaitranvillas.com ↗" },
+        { detail: "/PhucHuyExperience", detailLabel: "Phúc Huy – xem chi tiết →", live: "https://huynp18.com/", liveLabel: "huynp18.com ↗" },
       ],
     },
     {
@@ -279,25 +271,38 @@ export default function Experience() {
                 </ul>
 
                 {/* Nút "Xem chi tiết" và nút mở website live — chỉ render nếu card có link */}
-                {exp.links && (
-                  <div className="exp__detail-row">
-                    {exp.links.map((l) =>
-                      l.to ? (
-                        <Link key={l.label} to={l.to} className="exp__detail-btn">
-                          {l.label}
-                        </Link>
-                      ) : (
+                {exp.projects && (
+                  <div className="exp__project-links">
+                    {exp.projects.map((pj, i) => {
+                      /* Vị trí trong lưới: desktop 4 cột (link web hàng trên, chi tiết hàng dưới),
+                         tablet 2 cột, mobile 1 cột (mỗi dự án: link web rồi chi tiết) */
+                      const pos = {
+                        "--col-d": i + 1,
+                        "--col-t": (i % 2) + 1,
+                        "--row-t": Math.floor(i / 2) * 2 + 1,
+                        "--row-m": i * 2 + 1,
+                      };
+                      return [
                         <a
-                          key={l.label}
-                          href={l.href}
-                          className="exp__detail-btn"
+                          key={pj.live}
+                          href={pj.live}
+                          className="exp__detail-btn exp__pl-live"
+                          style={pos}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          {l.label}
-                        </a>
-                      )
-                    )}
+                          {pj.liveLabel}
+                        </a>,
+                        <Link
+                          key={pj.detail}
+                          to={pj.detail}
+                          className="exp__detail-btn exp__pl-detail"
+                          style={pos}
+                        >
+                          {pj.detailLabel}
+                        </Link>,
+                      ];
+                    })}
                   </div>
                 )}
 
