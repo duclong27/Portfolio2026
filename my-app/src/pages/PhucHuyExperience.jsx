@@ -13,7 +13,7 @@ import SuaKyNang from "../assets/PhucHuyPictures/SuaKyNang.webp";
 const content = {
     en: {
         backBtn: "Back to Experience",
-        eyebrow: "Freelance Project · AQ.LAB Vietnam",
+        eyebrow: "Project · AQ.LAB Vietnam",
         title: "Phúc Huy – Event Project Manager",
         subtitle: "Bilingual personal portfolio landing page with a content admin",
         stack: ["WordPress", "PHP", "JavaScript", "SCF (Custom Fields)", "Custom i18n (VI/EN)"],
@@ -42,7 +42,7 @@ const content = {
 
     vi: {
         backBtn: "Quay lại Kinh nghiệm",
-        eyebrow: "Dự án Freelance · AQ.LAB Việt Nam",
+        eyebrow: "Dự án · AQ.LAB Việt Nam",
         title: "Phúc Huy – Event Project Manager",
         subtitle: "Landing page portfolio cá nhân song ngữ kèm trang quản trị nội dung",
         stack: ["WordPress", "PHP", "JavaScript", "SCF (Custom Fields)", "Song ngữ tự xây (VI/EN)"],

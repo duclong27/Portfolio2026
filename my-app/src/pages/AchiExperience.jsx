@@ -14,7 +14,7 @@ import CoSoVatChat from "../assets/AchiPictures/CoSoVatChat.webp";
 const content = {
     en: {
         backBtn: "Back to Experience",
-        eyebrow: "Freelance Project · AQ.LAB Vietnam",
+        eyebrow: "Project · AQ.LAB Vietnam",
         title: "Achi Home Montessori",
         subtitle: "Kindergarten website & admin CMS, self-hosted on a company VPS",
         stack: ["Next.js 16", "TypeScript", "Tailwind CSS v4", "Supabase", "Docker"],
@@ -44,7 +44,7 @@ const content = {
 
     vi: {
         backBtn: "Quay lại Kinh nghiệm",
-        eyebrow: "Dự án Freelance · AQ.LAB Việt Nam",
+        eyebrow: "Dự án · AQ.LAB Việt Nam",
         title: "Achi Home Montessori",
         subtitle: "Website trường mầm non & trang quản trị, tự triển khai trên VPS công ty",
         stack: ["Next.js 16", "TypeScript", "Tailwind CSS v4", "Supabase", "Docker"],

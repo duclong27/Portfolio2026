@@ -2163,3 +2163,299 @@ h1, h2 { text-wrap: balance; }
     .exp__project-links .exp__pl-live { grid-row: var(--row-m); }
     .exp__project-links .exp__pl-detail { grid-row: calc(var(--row-m) + 1); margin-bottom: 6px; }
 }
+
+/* =======================================================================
+   7) TỐI ƯU DESKTOP + MOBILE (11/2026)
+   - Đặt cuối file để ghi đè. Không đổi bố cục, chỉ chỉnh cỡ chữ,
+     khoảng cách và độ ổn định của navbar khi cuộn.
+   ======================================================================= */
+
+/* Navbar sticky ổn định khi cuộn trên mobile (iOS hay nháy/giật do
+   backdrop-filter + sticky): đẩy navbar lên lớp riêng của GPU */
+.navbar {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* Không cho trang "nảy" quá đà ở đầu/cuối trang (kéo navbar theo) */
+html,
+body {
+    overscroll-behavior-y: none;
+}
+
+/* ---------- DESKTOP / CHUNG ---------- */
+:root {
+    --container-max: 1400px;
+}
+
+@media (min-width: 1025px) {
+    :root {
+        --container-pad: 40px;
+    }
+
+    /* Tiêu đề hero: trừ thêm phần padding 2 bên */
+    .home__title {
+        font-size: clamp(28px, calc((100vw - 520px) / 20), 48px);
+    }
+}
+
+/* Hero: bỏ khoảng trống lớn giữa đoạn giới thiệu và nút */
+.home__cta {
+    padding-top: var(--space-3);
+}
+
+.home__lead {
+    font-size: 20px;
+}
+
+/* Phân cấp rõ: tiêu đề mục > tiêu đề thẻ > nội dung */
+.home__section-title {
+    font-size: 26px;
+    letter-spacing: -0.4px;
+}
+
+.home__section + .home__section {
+    margin-top: var(--space-2);
+}
+
+.home__card {
+    font-size: 17px;
+    padding: 18px 20px;
+}
+
+.home__card-title {
+    font-size: 19px;
+}
+
+.home__card-desc {
+    line-height: 1.65;
+}
+
+.home__skill-card .home__card-title {
+    font-size: 19px;
+}
+
+.home__tags .tag {
+    font-size: 15px;
+    padding: 8px 12px;
+}
+
+.home__tags .tag svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* 4 nhóm kỹ năng: 4 cột trên desktop rộng (trước đây 3 cột → 1 thẻ lẻ hàng dưới) */
+@media (min-width: 1200px) {
+    .home__skill-card {
+        grid-column: span 3;
+    }
+}
+
+.exp__lead {
+    font-size: 20px;
+}
+
+.projects__subtitle {
+    font-size: 20px;
+}
+
+/* ---------- MOBILE NAVBAR (≤ 768px): gọn hơn, nền đặc hơn ---------- */
+@media (max-width: 768px) {
+    .navbar {
+        background: rgba(232, 179, 220, 0.94);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .navbar__inner {
+        gap: 6px;
+        padding-block: 8px;
+        margin-top: 0;
+    }
+
+    .nav__eyebrow,
+    .nav-link,
+    .nav-lang-btn {
+        padding: 6px 12px;
+    }
+}
+
+/* ---------- MOBILE NỘI DUNG (≤ 640px) ---------- */
+@media (max-width: 640px) {
+    .home__lead {
+        font-size: 16px;
+    }
+
+    .home__section-title {
+        font-size: 22px;
+    }
+
+    .home__card {
+        font-size: 16px;
+        padding: 16px;
+    }
+
+    .home__card-title,
+    .home__skill-card .home__card-title {
+        font-size: 18px;
+    }
+
+    .home__tags .tag {
+        font-size: 14px;
+        padding: 7px 10px;
+    }
+
+    .home__tags .tag svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .home__language-name {
+        font-size: 20px;
+    }
+
+    .home__language-proficiency {
+        font-size: 15px;
+    }
+
+    .home__contact-title {
+        font-size: 24px;
+    }
+
+    .home__contact-desc {
+        font-size: 16px;
+    }
+
+    /* Experience: cột thống kê bên trên gọn lại */
+    .exp__lead {
+        font-size: 16px;
+    }
+
+    .exp__stat-label {
+        font-size: 15px;
+    }
+
+    .exp__stat-value {
+        font-size: 38px;
+    }
+
+    .exp__stat-desc {
+        font-size: 16px;
+    }
+
+    .exp__stat-card li,
+    .exp__aside li {
+        font-size: 15px;
+    }
+
+    .exp__stack-title {
+        font-size: 18px;
+    }
+
+    .exp__tags .tag {
+        font-size: 13px;
+    }
+
+    /* Timeline: thu hẹp lề trái để thẻ rộng hơn */
+    .exp__item {
+        padding-left: 30px;
+    }
+
+    .exp__line {
+        left: 6px;
+    }
+
+    .exp__dot {
+        left: -1px;
+    }
+
+    .exp__card {
+        padding: 20px 18px;
+    }
+
+    .exp__time {
+        font-size: 16px;
+    }
+
+    .exp__role {
+        font-size: 22px;
+    }
+
+    .exp__company {
+        font-size: 16px;
+    }
+
+    .exp__location {
+        font-size: 15px;
+    }
+
+    .exp__card li {
+        font-size: 15px;
+    }
+
+    /* Projects */
+    .projects__subtitle {
+        font-size: 16px;
+    }
+
+    .projects__card-title {
+        font-size: 26px;
+    }
+
+    .projects__card-desc {
+        font-size: 16px;
+    }
+
+    .projects__features-title {
+        font-size: 18px;
+    }
+
+    .projects__feature-item {
+        font-size: 15px;
+    }
+}
+
+/* Dấu đầu dòng vẽ bằng CSS (ký tự ▸ hiển thị lệch/khác nhau giữa các máy) */
+.exp__list {
+    list-style: none;
+}
+
+.exp__list li::before {
+    content: "";
+    left: -18px;
+    top: calc(0.875em - 4.5px);
+    width: 0;
+    height: 0;
+    border-left: 7px solid var(--clr-accent);
+    border-top: 4.5px solid transparent;
+    border-bottom: 4.5px solid transparent;
+}
+
+.home__language-proficiency {
+    font-size: 17px;
+}
+
+@media (max-width: 640px) {
+    .home__language-proficiency {
+        font-size: 15px;
+    }
+
+    /* Tên công ty xuống dòng riêng, bỏ dấu "—" treo cuối dòng */
+    .exp__role-sep {
+        display: none;
+    }
+
+    .exp__company {
+        display: block;
+        margin-top: 4px;
+    }
+
+    /* Nút dự án full chiều ngang thẻ */
+    .exp__project-links {
+        grid-template-columns: 1fr;
+    }
+}

@@ -12,7 +12,7 @@ import BlogEditor from "../assets/PuraPictures/BlogEditor.png";
 const content = {
     en: {
         backBtn: "Back to Experience",
-        eyebrow: "Freelance Project · AQ.LAB Vietnam",
+        eyebrow: "Project · AQ.LAB Vietnam",
         title: "Pura Ha Giang Loop",
         subtitle: "Tour booking website & admin CMS for a Ha Giang tour operator",
         stack: ["React", "Vite", "Supabase", "JavaScript", "HTML/CSS"],
@@ -40,7 +40,7 @@ const content = {
 
     vi: {
         backBtn: "Quay lại Kinh nghiệm",
-        eyebrow: "Dự án Freelance · AQ.LAB Việt Nam",
+        eyebrow: "Dự án · AQ.LAB Việt Nam",
         title: "Pura Ha Giang Loop",
         subtitle: "Website đặt tour & trang quản trị cho đơn vị tour Hà Giang",
         stack: ["React", "Vite", "Supabase", "JavaScript", "HTML/CSS"],

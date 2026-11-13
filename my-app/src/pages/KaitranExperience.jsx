@@ -12,7 +12,7 @@ import Pages from "../assets/KaitranPictures/Pages.webp";
 const content = {
     en: {
         backBtn: "Back to Experience",
-        eyebrow: "Freelance Project · AQ.LAB Vietnam",
+        eyebrow: "Project · AQ.LAB Vietnam",
         title: "Kaitran Villas",
         subtitle: "Multilingual private-pool villa rental website with booking requests and admin",
         stack: ["WordPress", "PHP", "JavaScript", "SCF (Custom Fields)", "GTranslate", "Rank Math SEO"],
@@ -40,7 +40,7 @@ const content = {
 
     vi: {
         backBtn: "Quay lại Kinh nghiệm",
-        eyebrow: "Dự án Freelance · AQ.LAB Việt Nam",
+        eyebrow: "Dự án · AQ.LAB Việt Nam",
         title: "Kaitran Villas",
         subtitle: "Website cho thuê villa hồ bơi riêng đa ngôn ngữ, có yêu cầu đặt và trang quản trị",
         stack: ["WordPress", "PHP", "JavaScript", "SCF (Custom Fields)", "GTranslate", "Rank Math SEO"],

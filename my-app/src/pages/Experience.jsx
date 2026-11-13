@@ -7,7 +7,7 @@ const experiencesByLang = {
   en: [
     {
       time: "09/2026 — Present",
-      role: "Freelance Fullstack Developer",
+      role: "Fullstack Developer",
       company: "AQ.LAB Vietnam Technology Services Co., Ltd.",
       location: "Phu Tho",
       stack: ["Next.js", "React", "TypeScript", "Supabase", "Tailwind CSS", "Docker", "WordPress", "PHP"],
@@ -83,7 +83,7 @@ const experiencesByLang = {
   vi: [
     {
       time: "09/2026 — Hiện tại",
-      role: "Fullstack Developer (Freelance)",
+      role: "Fullstack Developer",
       company: "Công ty TNHH Dịch vụ Công nghệ AQ.LAB Việt Nam",
       location: "Phú Thọ",
       stack: ["Next.js", "React", "TypeScript", "Supabase", "Tailwind CSS", "Docker", "WordPress", "PHP"],
@@ -251,7 +251,7 @@ export default function Experience() {
                   <div>
                     <p className="exp__time">{exp.time}</p>
                     <h3 className="exp__role">
-                      {exp.role} — <span className="exp__company">{exp.company}</span>
+                      {exp.role} <span className="exp__role-sep">—</span> <span className="exp__company">{exp.company}</span>
                     </h3>
                     <p className="exp__location">{exp.location}</p>
                   </div>

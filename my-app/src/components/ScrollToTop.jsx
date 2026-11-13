@@ -6,7 +6,9 @@ export default function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    /* "instant": tránh hiệu ứng cuộn mượt (html có scroll-behavior: smooth)
+       chạy mỗi lần đổi trang – gây giật navbar trên mobile */
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [pathname]);
 
   return null;
