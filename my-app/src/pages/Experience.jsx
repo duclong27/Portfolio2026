@@ -10,6 +10,12 @@ const experiencesByLang = {
       role: "Fullstack Developer",
       company: "AQ.LAB Vietnam Technology Services Co., Ltd.",
       location: "Phu Tho",
+      companyLink: "https://web.vnc360.com/",
+      companySites: [
+        { url: "https://web.vnc360.com/", label: "web.vnc360.com" },
+        { url: "https://vnc360.com/", label: "vnc360.com" },
+      ],
+      companySitesLabel: "Company products:",
       stack: ["Next.js", "React", "TypeScript", "Supabase", "Tailwind CSS", "Docker", "WordPress", "PHP"],
       highlights: [
         "Built and deployed Achi Home Montessori, a 33-page kindergarten website with a custom admin CMS, self-hosted on the company VPS with Docker.",
@@ -86,6 +92,12 @@ const experiencesByLang = {
       role: "Fullstack Developer",
       company: "Công ty TNHH Dịch vụ Công nghệ AQ.LAB Việt Nam",
       location: "Phú Thọ",
+      companyLink: "https://web.vnc360.com/",
+      companySites: [
+        { url: "https://web.vnc360.com/", label: "web.vnc360.com" },
+        { url: "https://vnc360.com/", label: "vnc360.com" },
+      ],
+      companySitesLabel: "Sản phẩm của công ty:",
       stack: ["Next.js", "React", "TypeScript", "Supabase", "Tailwind CSS", "Docker", "WordPress", "PHP"],
       highlights: [
         "Xây dựng và triển khai Achi Home Montessori, website trường mầm non 33 trang kèm trang quản trị riêng, tự triển khai trên VPS công ty bằng Docker.",
@@ -251,9 +263,33 @@ export default function Experience() {
                   <div>
                     <p className="exp__time">{exp.time}</p>
                     <h3 className="exp__role">
-                      {exp.role} <span className="exp__role-sep">—</span> <span className="exp__company">{exp.company}</span>
+                      {exp.role} <span className="exp__role-sep">—</span> {exp.companyLink ? (
+                        <a
+                          href={exp.companyLink}
+                          className="exp__company exp__company--link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {exp.company} ↗
+                        </a>
+                      ) : (
+                        <span className="exp__company">{exp.company}</span>
+                      )}
                     </h3>
                     <p className="exp__location">{exp.location}</p>
+                    {exp.companySites && (
+                      <p className="exp__company-sites">
+                        <span>🌐 {exp.companySitesLabel}</span>
+                        {exp.companySites.map((site, i) => (
+                          <span key={site.url}>
+                            {i > 0 && <span className="exp__company-sites-sep"> · </span>}
+                            <a href={site.url} target="_blank" rel="noopener noreferrer">
+                              {site.label} ↗
+                            </a>
+                          </span>
+                        ))}
+                      </p>
+                    )}
                   </div>
                   <div className="exp__stack-mini">
                     {exp.stack.map((tech) => (
@@ -269,6 +305,23 @@ export default function Experience() {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
+
+                {/* Link trang sản phẩm của công ty (chip xám, tách khỏi dự án cá nhân) */}
+                {exp.companySites && (
+                  <div className="exp__company-links">
+                    {exp.companySites.map((site) => (
+                      <a
+                        key={site.url}
+                        href={site.url}
+                        className="exp__company-chip"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        🏢 {site.label} ↗
+                      </a>
+                    ))}
+                  </div>
+                )}
 
                 {/* Nút "Xem chi tiết" và nút mở website live — chỉ render nếu card có link */}
                 {exp.projects && (

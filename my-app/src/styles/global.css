@@ -2459,3 +2459,85 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* =======================================================================
+   8) LINK TRANG SẢN PHẨM CÔNG TY (AQ.LAB → vnc360)
+   ======================================================================= */
+.exp__company--link {
+    text-decoration: underline;
+    text-decoration-color: rgba(100, 116, 139, 0.4);
+    text-underline-offset: 4px;
+    transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+
+.exp__company--link:hover {
+    color: var(--clr-accent);
+    text-decoration-color: currentColor;
+}
+
+.exp__company-sites {
+    margin: 6px 0 0;
+    color: var(--clr-muted);
+    font-size: clamp(15px, 1.8vw, 18px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 8px;
+}
+
+.exp__company-sites a {
+    color: var(--clr-accent);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.exp__company-sites a:hover {
+    text-decoration: underline;
+}
+
+.exp__company-sites-sep {
+    color: var(--clr-muted);
+    margin-right: 8px;
+}
+
+.exp__company-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: var(--space-4);
+    padding-top: var(--space-3);
+    border-top: 1px solid rgba(124, 58, 237, 0.12);
+}
+
+.exp__company-links + .exp__project-links {
+    margin-top: 10px;
+    padding-top: 0;
+    border-top: none;
+}
+
+.exp__company-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(100, 116, 139, 0.35);
+    background: rgba(100, 116, 139, 0.08);
+    color: #475569;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 160ms ease, transform 160ms ease;
+}
+
+.exp__company-chip:hover {
+    background: rgba(100, 116, 139, 0.15);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+    .exp__company-sites { font-size: 14px; }
+    .exp__company-links { flex-direction: column; }
+    .exp__company-chip { justify-content: center; width: 100%; }
+}
